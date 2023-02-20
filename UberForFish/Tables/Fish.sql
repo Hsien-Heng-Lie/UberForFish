@@ -6,6 +6,7 @@
     [Email] VARCHAR(100) NOT NULL, 
     [MobileNumber] VARCHAR(50) NOT NULL, 
     CONSTRAINT [PK_FishId] PRIMARY KEY ([FishId]), 
-    CONSTRAINT [UQ_FishEmail] UNIQUE ([Email])
+    CONSTRAINT [UQ_FishEmail] UNIQUE ([Email]),
+    CONSTRAINT [UQ_FishMobileNumber] UNIQUE ([MobileNumber])
 
 )
