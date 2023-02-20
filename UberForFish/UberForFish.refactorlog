@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c3ab7b16-4b03-4e1c-8dae-363f5d876dfb" ChangeDateTime="02/17/2023 13:34:39">
+    <Property Name="ElementName" Value="[dbo].[Fish].[email]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Fish]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Email" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="990ab883-c750-49f7-a496-cf328efb4a16" ChangeDateTime="02/17/2023 13:48:32">
+    <Property Name="ElementName" Value="[dbo].[PK_WhaleType]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[WhaleType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_WhaleTypeId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a00d23b6-d0a6-4162-997c-9cff1aafb7ea" ChangeDateTime="02/17/2023 13:51:05">
+    <Property Name="ElementName" Value="[dbo].[PK_Whale]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Whale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_WhaleId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c6a61339-c06c-4e68-b45f-08153890c333" ChangeDateTime="02/17/2023 13:52:15">
+    <Property Name="ElementName" Value="[dbo].[FK_Whale_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Whale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_WhaleTypeId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="94af1eb7-73cc-44fe-bcdc-8587154fc155" ChangeDateTime="02/17/2023 13:54:59">
+    <Property Name="ElementName" Value="[dbo].[AK_Whale_Column]" />
+    <Property Name="ElementType" Value="SqlUniqueConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Whale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[UQ_WhaleEmail]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2eb867da-f4c8-4c00-a7c0-8abd94c125b5" ChangeDateTime="02/17/2023 13:58:36">
+    <Property Name="ElementName" Value="[dbo].[AK_WhaleType_Column]" />
+    <Property Name="ElementType" Value="SqlUniqueConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[WhaleType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[UQ_WhaleType]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c6843bb5-f914-4c80-b5df-e20968fd2526" ChangeDateTime="02/17/2023 14:00:36">
+    <Property Name="ElementName" Value="[dbo].[WhaleType].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WhaleType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Type" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3605dd09-4ec9-4d78-89a4-5e889f1f6910" ChangeDateTime="02/17/2023 14:08:05">
+    <Property Name="ElementName" Value="[dbo].[Fish].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Fish]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FishId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6d5594a1-6569-484c-bb63-33517a395b15" ChangeDateTime="02/17/2023 14:08:14">
+    <Property Name="ElementName" Value="[dbo].[WhaleType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WhaleType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WhaleTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e870642c-fca6-4e75-8693-3b87c8089401" ChangeDateTime="02/17/2023 14:08:21">
+    <Property Name="ElementName" Value="[dbo].[Whale].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Whale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WhaleId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e2cd0da5-82a0-47f8-bb84-f24e09fb9812" ChangeDateTime="02/17/2023 14:08:34">
+    <Property Name="ElementName" Value="[dbo].[Journey].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Journey]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="JourneyId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="53e8a721-399a-4e1b-97ba-87dd49560eb8" ChangeDateTime="02/17/2023 14:09:10">
+    <Property Name="ElementName" Value="[dbo].[Journey].[PickupLocation]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Journey]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PickUpLocation" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="20baecb4-771c-42bc-b867-77b822fe8082" ChangeDateTime="02/17/2023 14:11:49">
+    <Property Name="ElementName" Value="[dbo].[Transaction].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Transaction]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TransactionId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f7f0820d-821b-4519-817c-90d79115a219" ChangeDateTime="02/20/2023 15:32:32">
+    <Property Name="ElementName" Value="[dbo].[Rating].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Rating]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RatingId" />
+  </Operation>
+</Operations>
