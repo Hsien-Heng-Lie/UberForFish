@@ -57,6 +57,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="UDF" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Fish.sql" />
@@ -64,5 +65,9 @@
     <Build Include="Tables\Whale.sql" />
     <Build Include="Tables\Transaction.sql" />
     <Build Include="Tables\Rating.sql" />
+    <Build Include="UDF\getGeography.sql" />
+    <Build Include="UDF\calculateDistanceInMeters.sql" />
+    <Build Include="UDF\convertMeterToNauticalMile.sql" />
+    <Build Include="UDF\convertNauticalMileToMeter.sql" />
   </ItemGroup>
 </Project>
