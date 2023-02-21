@@ -65,7 +65,4 @@
     <Build Include="Tables\Transaction.sql" />
     <Build Include="Tables\Rating.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="UberForFish.refactorlog" />
-  </ItemGroup>
 </Project>
