@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Transaction]
 (
-	[TransactionId] INT NOT NULL, 
+	[TransactionId] INT NOT NULL IDENTITY(1,1), 
     [WhaleId] INT NOT NULL, 
     [DateTime] DATETIME NOT NULL, 
     [FishId] INT NOT NULL, 
