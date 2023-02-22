@@ -1,6 +1,6 @@
 ﻿--Insert transaction when whale confirms fish trip
 
-CREATE PROCEDURE [dbo].[transactionInsert]
+CREATE PROCEDURE [dbo].[sp_transactionInsert]
 		@whaleId INT,
 		@fishId INT,
 		@pickUpLocation GEOGRAPHY,
@@ -11,6 +11,7 @@ AS
 
 		DECLARE @distance FLOAT= [dbo].[calculateDistanceInMeters](@pickUpLocation,@dropOffLocation),
 				@cost FLOAT ;
+
 		SET @cost = [dbo].[calculateWhaleTravelCost](@whaleId, @distance)
 
 

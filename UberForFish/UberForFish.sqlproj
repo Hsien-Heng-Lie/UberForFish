@@ -71,6 +71,6 @@
     <Build Include="UDF\convertMeterToNauticalMile.sql" />
     <Build Include="UDF\convertNauticalMileToMeter.sql" />
     <Build Include="UDF\calculateWhaleTravelCost.sql" />
-    <Build Include="Stored Procedures\transactionInsert.sql" />
+    <Build Include="Stored Procedures\sp_transactionInsert.sql" />
   </ItemGroup>
 </Project>
