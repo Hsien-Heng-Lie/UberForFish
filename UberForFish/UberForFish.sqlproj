@@ -69,5 +69,6 @@
     <Build Include="UDF\calculateDistanceInMeters.sql" />
     <Build Include="UDF\convertMeterToNauticalMile.sql" />
     <Build Include="UDF\convertNauticalMileToMeter.sql" />
+    <Build Include="UDF\calculateWhaleTravelCost.sql" />
   </ItemGroup>
 </Project>
