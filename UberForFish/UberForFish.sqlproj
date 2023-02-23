@@ -81,6 +81,14 @@
     <Build Include="Views\vw_transactionJourney.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data Take On\InsertWhaleType" />
+    <None Include="Data Take On\InsertWhaleType.sql" />
+    <None Include="Data Take On\InsertWhale.sql" />
+    <None Include="Data Take On\InsertFish.sql" />
+    <None Include="Data Take On\InsertTransaction.sql" />
+    <None Include="Data Take On\UpdateTransaction.sql" />
+    <None Include="Data Take On\InsertRating.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data Take On\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
