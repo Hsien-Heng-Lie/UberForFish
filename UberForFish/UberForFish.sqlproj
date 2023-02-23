@@ -73,5 +73,6 @@
     <Build Include="UDF\calculateWhaleTravelCost.sql" />
     <Build Include="Stored Procedures\sp_transactionInsert.sql" />
     <Build Include="Stored Procedures\sp_transactionUpdate.sql" />
+    <Build Include="Stored Procedures\sp_ratingUpSert.sql" />
   </ItemGroup>
 </Project>
