@@ -1,4 +1,4 @@
-﻿CREATE VIEW [dbo].[vw_fishRating] AS
+﻿CREATE VIEW [dbo].[vw_fishRatings] AS
 	SELECT  f.Name AS [Name],
 			f.LastName AS [Last Name],
 			rt.Trips AS [No. of Trips],
