@@ -2,6 +2,7 @@
 SELECT
 	tj.Date,
 	tj.Whale,
+	tj.Type,
 	tj.Fish,
 	tj.[Pick Up Location],
 	tj.[Drop Off Location],
@@ -14,6 +15,7 @@ SELECT
 	(
 	SELECT
 		CONCAT(w.[Name], ' ', w.[LastName]) as [Whale],
+		wt.[Type],
 		CAST([DateTime] AS DATE ) AS [Date],
 		CONCAT(f.[Name], ' ', f.[LastName]) as [Fish],
 		CONCAT([PickUpLocation].Lat, '° , ' ,[PickUpLocation].Long, '°') as [Pick Up Location],
@@ -27,4 +29,6 @@ SELECT
 			ON t.WhaleId = w.WhaleId
 		LEFT JOIN [dbo].[Fish] f
 			ON t.FishId = f.FishId
+		INNER JOIN [dbo].[WhaleType] wt
+			ON w.WhaleTypeId = wt.WhaleTypeId
 	) AS tj
