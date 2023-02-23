@@ -59,6 +59,7 @@
     <Folder Include="Tables" />
     <Folder Include="UDF" />
     <Folder Include="Stored Procedures" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Fish.sql" />
@@ -74,5 +75,8 @@
     <Build Include="Stored Procedures\sp_transactionInsert.sql" />
     <Build Include="Stored Procedures\sp_transactionUpdate.sql" />
     <Build Include="Stored Procedures\sp_ratingUpSert.sql" />
+    <Build Include="Views\vw_whaleRatings.sql" />
+    <Build Include="Views\vw_fishRating.sql" />
+    <Build Include="Views\vw_transactionJourney.sql" />
   </ItemGroup>
 </Project>
