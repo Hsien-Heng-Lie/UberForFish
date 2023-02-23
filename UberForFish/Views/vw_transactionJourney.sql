@@ -2,11 +2,11 @@
 SELECT
 	tj.Date,
 	tj.Whale,
-	tj.Type,
+	tj.[Type] as [Whale Type],
 	tj.Fish,
 	tj.[Pick Up Location],
 	tj.[Drop Off Location],
-	[dbo].[udf_convertMeterToNauticalMile](tj.[Distance In Meters]) AS [Distance in Nautical Miles],
+	CAST([dbo].[udf_convertMeterToNauticalMile](tj.[Distance In Meters]) AS DECIMAL(38,2)) AS [Distance in Nautical Miles],
 	tj.[Pick Up Time],
 	tj.[Drop Off Time],
 	tj.[Trip Cost] AS [Trip Card(Ocean Dollars)]
