@@ -1,4 +1,4 @@
-﻿CREATE FUNCTION [dbo].[calculateDistanceInMeters]
+﻿CREATE FUNCTION [dbo].[udf_calculateDistanceInMeters]
 (
 @point_a GEOGRAPHY,
 @point_b GEOGRAPHY

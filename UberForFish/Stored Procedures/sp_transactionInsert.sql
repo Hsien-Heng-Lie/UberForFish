@@ -9,10 +9,10 @@ AS
 	BEGIN TRY
 
 
-		DECLARE @distance FLOAT= [dbo].[calculateDistanceInMeters](@pickUpLocation,@dropOffLocation),
+		DECLARE @distance FLOAT= [dbo].[udf_calculateDistanceInMeters](@pickUpLocation,@dropOffLocation),
 				@cost FLOAT ;
 
-		SET @cost = [dbo].[calculateWhaleTravelCost](@whaleId, @distance)
+		SET @cost = [dbo].[udf_calculateWhaleTravelCost](@whaleId, @distance)
 
 
 		BEGIN TRAN

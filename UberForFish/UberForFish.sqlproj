@@ -68,11 +68,11 @@
     <Build Include="Tables\Whale.sql" />
     <Build Include="Tables\Transaction.sql" />
     <Build Include="Tables\Rating.sql" />
-    <Build Include="UDF\getGeography.sql" />
-    <Build Include="UDF\calculateDistanceInMeters.sql" />
-    <Build Include="UDF\convertMeterToNauticalMile.sql" />
-    <Build Include="UDF\convertNauticalMileToMeter.sql" />
-    <Build Include="UDF\calculateWhaleTravelCost.sql" />
+    <Build Include="UDF\udf_getGeography.sql" />
+    <Build Include="UDF\udf_calculateDistanceInMeters.sql" />
+    <Build Include="UDF\udf_convertMeterToNauticalMile.sql" />
+    <Build Include="UDF\udf_convertNauticalMileToMeter.sql" />
+    <Build Include="UDF\udf_calculateWhaleTravelCost.sql" />
     <Build Include="Stored Procedures\sp_transactionInsert.sql" />
     <Build Include="Stored Procedures\sp_transactionUpdate.sql" />
     <Build Include="Stored Procedures\sp_ratingUpSert.sql" />
