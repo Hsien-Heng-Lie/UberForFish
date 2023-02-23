@@ -60,6 +60,7 @@
     <Folder Include="UDF" />
     <Folder Include="Stored Procedures" />
     <Folder Include="Views" />
+    <Folder Include="Data Take On" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Fish.sql" />
@@ -78,5 +79,8 @@
     <Build Include="Views\vw_whaleRatings.sql" />
     <Build Include="Views\vw_fishRating.sql" />
     <Build Include="Views\vw_transactionJourney.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data Take On\InsertWhaleType" />
   </ItemGroup>
 </Project>
