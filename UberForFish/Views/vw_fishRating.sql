@@ -1,7 +1,7 @@
 ﻿CREATE VIEW [dbo].[vw_fishRating] AS
-	SELECT CAST(rt.[Rating] AS DECIMAL(2,1)) [Average Rating],
-			f.Name AS [Name],
-			f.LastName AS [Last Name]
+	SELECT  f.Name AS [Name],
+			f.LastName AS [Last Name],
+			CAST(rt.[Rating] AS DECIMAL(2,1)) [Average Rating]
 	FROM 
 	(
 		SELECT 
