@@ -1,10 +1,24 @@
 ﻿CREATE VIEW [dbo].[vw_transactionJourney] AS 
+SELECT
+	tj.Date,
+	tj.Whale,
+	tj.Fish,
+	tj.[Pick Up Location],
+	tj.[Drop Off Location],
+	[dbo].[udf_convertMeterToNauticalMile](tj.[Distance In Meters]) AS [Distance in Nautical Miles],
+	tj.[Pick Up Time],
+	tj.[Drop Off Time],
+	tj.[Trip Cost] AS [Trip Card(Ocean Dollars)]
+
+	FROM 
+	(
 	SELECT
 		CONCAT(w.[Name], ' ', w.[LastName]) as [Whale],
 		CAST([DateTime] AS DATE ) AS [Date],
 		CONCAT(f.[Name], ' ', f.[LastName]) as [Fish],
 		CONCAT([PickUpLocation].Lat, '° , ' ,[PickUpLocation].Long, '°') as [Pick Up Location],
 		CONCAT([DropOffLocation].Lat, '° , ' ,[DropOffLocation].Long,'°') as [Drop Off Location],
+		([dbo].[udf_calculateDistanceInMeters]([PickUpLocation],[DropOffLocation])) AS [Distance In Meters],
 		[PickUpTime] AS [Pick Up Time],
 		[DropOffTime] AS [Drop Off Time],
 		CAST([Cost] AS DECIMAL(38,2)) AS [Trip Cost]
@@ -13,3 +27,4 @@
 			ON t.WhaleId = w.WhaleId
 		LEFT JOIN [dbo].[Fish] f
 			ON t.FishId = f.FishId
+	) AS tj
