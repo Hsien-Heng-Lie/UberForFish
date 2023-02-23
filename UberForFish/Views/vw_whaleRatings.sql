@@ -1,11 +1,13 @@
 ﻿CREATE VIEW [dbo].[vw_whaleRatings]	AS 
-	SELECT CAST(rt.[Rating] AS DECIMAL(2,1)) [Average Rating],
-		w.Name AS [Name],
-		w.LastName AS [Last Name]
+	SELECT w.Name AS [Name],
+		w.LastName AS [Last Name],
+		rt.Trips AS [No. of Trips],
+		CAST(rt.[Rating] AS DECIMAL(2,1)) [Average Rating]
 	FROM 
 	(
 		SELECT 
 		AVG(CAST(r.WhaleRating AS FLOAT)) AS [Rating],
+		COUNT(t.WhaleId) AS [Trips],
 		t.WhaleId
 		FROM Rating AS r
 			INNER JOIN [dbo].[Transaction] t

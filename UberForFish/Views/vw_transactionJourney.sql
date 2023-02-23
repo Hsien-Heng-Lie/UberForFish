@@ -2,10 +2,11 @@
 SELECT
 	tj.Date,
 	tj.Whale,
+	tj.[Type] as [Whale Type],
 	tj.Fish,
 	tj.[Pick Up Location],
 	tj.[Drop Off Location],
-	[dbo].[udf_convertMeterToNauticalMile](tj.[Distance In Meters]) AS [Distance in Nautical Miles],
+	CAST([dbo].[udf_convertMeterToNauticalMile](tj.[Distance In Meters]) AS DECIMAL(38,2)) AS [Distance in Nautical Miles],
 	tj.[Pick Up Time],
 	tj.[Drop Off Time],
 	tj.[Trip Cost] AS [Trip Card(Ocean Dollars)]
@@ -14,6 +15,7 @@ SELECT
 	(
 	SELECT
 		CONCAT(w.[Name], ' ', w.[LastName]) as [Whale],
+		wt.[Type],
 		CAST([DateTime] AS DATE ) AS [Date],
 		CONCAT(f.[Name], ' ', f.[LastName]) as [Fish],
 		CONCAT([PickUpLocation].Lat, '° , ' ,[PickUpLocation].Long, '°') as [Pick Up Location],
@@ -27,4 +29,6 @@ SELECT
 			ON t.WhaleId = w.WhaleId
 		LEFT JOIN [dbo].[Fish] f
 			ON t.FishId = f.FishId
+		INNER JOIN [dbo].[WhaleType] wt
+			ON w.WhaleTypeId = wt.WhaleTypeId
 	) AS tj
