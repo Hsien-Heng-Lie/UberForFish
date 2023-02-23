@@ -1,4 +1,4 @@
-﻿CREATE FUNCTION [dbo].[convertMeterToNauticalMile]
+﻿CREATE FUNCTION [dbo].[udf_convertMeterToNauticalMile]
 (
 @meter FLOAT
 )

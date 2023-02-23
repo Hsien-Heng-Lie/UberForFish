@@ -1,4 +1,4 @@
-﻿CREATE FUNCTION [dbo].[getGeography]
+﻿CREATE FUNCTION [dbo].[udf_getGeography]
 (
 @latitude FLOAT,
 @longitude FLOAT
