@@ -1,4 +1,4 @@
-INSERT INTO [dbo].WhaleType 
+﻿INSERT INTO [dbo].WhaleType 
 ([Type], CostPerMile, Capacity,AvgTravelSpeed)
 VALUES
 ('Humpback','0.186437003','3','9'),
